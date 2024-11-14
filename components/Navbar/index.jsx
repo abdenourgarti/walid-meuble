@@ -1,5 +1,7 @@
 'use client'
+import Link from 'next/link';
 import React, { useState } from 'react'
+import {FaHome} from 'react-icons/fa'
 
 const Navbar = () => {
     const [isClick, setIsClick] = useState(false);
@@ -14,37 +16,39 @@ const Navbar = () => {
                 <div className='flex items-center justify-between h-16'>
                     <div className='flex items-center'>
                         <div className='flex-shrink-0'>
-                            <a href='/' className='text-white'>
-                                Logo
-                            </a>
+                            <Link href='/' className='flex gap-1 items-center text-xl md:text-2xl lg:text-3xl font-bold'>
+                                <span className='italic text-white'>Art</span>
+                                <FaHome className='text-yellow-600'/>
+                                <span className='italic text-white'>Design</span>
+                            </Link>
                         </div>                 
                     </div>
                     <div className='hidden md:block'>
                         <div className='ml-4 flex items-center space-x-4'>
-                            <a 
+                            <Link 
                                 href='/' 
                                 className='text-white hover:bg-white hover:text-black rounded-lg p-2'
                             >
                                 Home
-                            </a>
-                            <a 
+                            </Link>
+                            <Link 
                                 href='/' 
                                 className='text-white hover:bg-white hover:text-black rounded-lg p-2'
                             >
                                 Home
-                            </a>
-                            <a 
+                            </Link>
+                            <Link 
                                 href='/' 
                                 className='text-white hover:bg-white hover:text-black rounded-lg p-2'
                             >
                                 Home
-                            </a>
-                            <a 
+                            </Link>
+                            <Link 
                                 href='/' 
                                 className='text-white hover:bg-white hover:text-black rounded-lg p-2'
                             >
                                 Home
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className='md:hidden flex items-center'>
@@ -93,30 +97,30 @@ const Navbar = () => {
                 isClick && (
                     <div className='md:hidden'>
                         <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
-                            <a 
+                            <Link 
                                 href='/' 
                                 className='text-white block hover:bg-white hover:text-black rounded-lg p-2'
                             >
                                 Home
-                            </a>
-                            <a 
+                            </Link>
+                            <Link 
                                 href='/' 
                                 className='text-white block hover:bg-white hover:text-black rounded-lg p-2'
                             >
                                 Home
-                            </a>
-                            <a 
+                            </Link>
+                            <Link 
                                 href='/' 
                                 className='text-white block hover:bg-white hover:text-black rounded-lg p-2'
                             >
                                 Home
-                            </a>
-                            <a 
+                            </Link>
+                            <Link 
                                 href='/' 
                                 className='text-white block hover:bg-white hover:text-black rounded-lg p-2'
                             >
                                 Home
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 )
